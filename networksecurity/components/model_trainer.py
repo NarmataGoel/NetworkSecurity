@@ -24,6 +24,10 @@ from sklearn.tree import DecisionTreeClassifier
 
 import mlflow
 
+import dagshub
+dagshub.init(repo_owner='NarmataGoel', repo_name='NetworkSecurity', mlflow=True)
+
+
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
         try:
@@ -101,10 +105,12 @@ class ModelTrainer:
 
             model_dir_path=os.path.dirname(self.model_trainer_config.trained_model_file_path)
             os.makedirs(model_dir_path,exist_ok=True)
-
+            save_object("final_models/model.pkl",best_model)
             Network_Model =NetworkModel(preprocessor=preprocessor,model=best_model)
             save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
 
+
+            
             model_trainer_artifact=ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                 train_metric_artifact=classification_train_metric,

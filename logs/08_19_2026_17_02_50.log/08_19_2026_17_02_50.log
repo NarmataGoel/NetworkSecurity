@@ -1,0 +1,34 @@
+[ 2026-08-19 17:03:11,108 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-19 17:03:11,142 ] 107 dagshub -INFO - Accessing as NarmataGoel
+[ 2026-08-19 17:03:12,224 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/NarmataGoel/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2026-08-19 17:03:12,859 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-19 17:03:12,859 ] 107 dagshub -INFO - Initialized MLflow to track repo "NarmataGoel/NetworkSecurity"
+[ 2026-08-19 17:03:12,870 ] 107 dagshub -INFO - Repository NarmataGoel/NetworkSecurity initialized!
+[ 2026-08-19 17:03:12,871 ] 19 root -INFO - initiate the data ingestion
+[ 2026-08-19 17:03:20,936 ] 57 root -INFO - performed train test split
+[ 2026-08-19 17:03:20,938 ] 60 root -INFO - exporting train and test file path
+[ 2026-08-19 17:03:21,158 ] 63 root -INFO - exporting train and test file path
+[ 2026-08-19 17:03:21,158 ] 21 root -INFO - Data initiation complete
+[ 2026-08-19 17:03:21,177 ] 25 root -INFO - initiate the data validation
+[ 2026-08-19 17:03:21,354 ] 33 root -INFO - required no of columns:2
+[ 2026-08-19 17:03:21,354 ] 34 root -INFO - Data frame columns:31
+[ 2026-08-19 17:03:21,356 ] 33 root -INFO - required no of columns:2
+[ 2026-08-19 17:03:21,358 ] 34 root -INFO - Data frame columns:31
+[ 2026-08-19 17:03:22,045 ] 27 root -INFO - data validation completed
+[ 2026-08-19 17:03:22,047 ] 30 root -INFO - data transformation started
+[ 2026-08-19 17:03:22,047 ] 58 root -INFO - entered initiate_data_transformation method of datatransformation class
+[ 2026-08-19 17:03:22,047 ] 60 root -INFO - start data transformation
+[ 2026-08-19 17:03:22,176 ] 40 root -INFO - entered get_data_transformer_object method of transformation
+[ 2026-08-19 17:03:22,176 ] 45 root -INFO - initialize KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-08-19 17:03:22,224 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-19 17:03:22,243 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-19 17:03:22,243 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-19 17:03:22,247 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-19 17:03:22,254 ] 33 root -INFO - data transformation completed
+[ 2026-08-19 17:03:22,254 ] 35 root -INFO - Model training started
+[ 2026-08-19 21:36:28,162 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-19 21:36:28,359 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-19 21:36:28,361 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-19 21:36:28,365 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-19 21:36:28,367 ] 119 root -INFO - model trainer artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\08_19_2026_17_02_50\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9919739916692065, precision_score=0.9930838079739626, recall_score=0.9930838079739626), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9707649179014818, precision_score=0.9766317485898469, recall_score=0.9766317485898469))
+[ 2026-08-19 21:36:28,402 ] 39 root -INFO - model training artifacts created
