@@ -48,7 +48,7 @@ class ModelTrainer:
             mlflow.log_metric("recall_score",recall_score)
             mlflow.sklearn.log_model(best_model,"model")
 
-    
+
     def train_model(self,x_train,y_train,x_test,y_test):
         try:
             models = {
@@ -58,31 +58,28 @@ class ModelTrainer:
                            "Logistic Regression": LogisticRegression(verbose=1),
                            "AdaBoost": AdaBoostClassifier(),
                        }
-            params={
-                    "Decision Tree": {
-                           'criterion':['gini', 'entropy', 'log_loss'],
-                           # 'splitter':['best','random'],
-                           # 'max_features':['sqrt','log2'],
-                       },
-                    "Random Forest":{
-                           # 'criterion':['gini', 'entropy', 'log_loss'],
-                           # 'max_features':['sqrt','log2',None],
-                           'n_estimators': [8,16,32,128,256]
-                       },
-                    "Gradient Boosting":{
-                           # 'loss':['log_loss', 'exponential'],
-                           'learning_rate':[.1,.01,.05,.001],
-                           'subsample':[0.6,0.7,0.75,0.85,0.9],
-                           # 'criterion':['squared_error', 'friedman_mse'],
-                           # 'max_features':['auto','sqrt','log2'],
-                           'n_estimators': [8,16,32,64,128,256]
-                       },
-                    "Logistic Regression":{},
-                    "AdaBoost":{
-                           'learning_rate':[.1,.01,.001],
-                           'n_estimators': [8,16,32,64,128,256]
-                       }
-                   }
+            params = {
+                     "Decision Tree": {
+                         'criterion': ['gini', 'entropy']
+                     },
+
+                     "Random Forest": {
+                         'n_estimators': [50, 100]
+                     },
+
+                     "Gradient Boosting": {
+                         'learning_rate': [0.05, 0.1],
+                         'subsample': [0.8, 1.0],
+                         'n_estimators': [50, 100]
+                     },
+
+                     "Logistic Regression": {},
+
+                     "AdaBoost": {
+                         'learning_rate': [0.05, 0.1],
+                         'n_estimators': [50, 100]
+                     }
+                 }
             model_report :dict=evaluate_models(X_train=x_train, y_train=y_train,X_test=x_test,y_test=y_test,models=models,param=params)
             best_model_score=max(sorted(model_report.values()))
 
@@ -110,7 +107,6 @@ class ModelTrainer:
             save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
 
 
-            
             model_trainer_artifact=ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                 train_metric_artifact=classification_train_metric,

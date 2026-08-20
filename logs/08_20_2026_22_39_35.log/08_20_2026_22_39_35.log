@@ -1,0 +1,34 @@
+[ 2026-08-20 22:39:58,571 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 22:39:58,592 ] 107 dagshub -INFO - Accessing as NarmataGoel
+[ 2026-08-20 22:39:59,800 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/NarmataGoel/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2026-08-20 22:40:02,264 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 22:40:02,270 ] 107 dagshub -INFO - Initialized MLflow to track repo "NarmataGoel/NetworkSecurity"
+[ 2026-08-20 22:40:02,271 ] 107 dagshub -INFO - Repository NarmataGoel/NetworkSecurity initialized!
+[ 2026-08-20 22:40:29,814 ] 34 root -INFO - start data ingestion
+[ 2026-08-20 22:41:06,973 ] 57 root -INFO - performed train test split
+[ 2026-08-20 22:41:06,974 ] 60 root -INFO - exporting train and test file path
+[ 2026-08-20 22:41:07,116 ] 63 root -INFO - exporting train and test file path
+[ 2026-08-20 22:41:07,117 ] 37 root -INFO - Data Ingestion completed and DataIngestionArtifact(trained_file_path='Artifacts\\08_20_2026_22_39_35\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\08_20_2026_22_39_35\\data_ingestion\\ingested\\test.csv')
+[ 2026-08-20 22:41:07,118 ] 46 root -INFO - start data validation
+[ 2026-08-20 22:41:07,193 ] 33 root -INFO - required no of columns:2
+[ 2026-08-20 22:41:07,193 ] 34 root -INFO - Data frame columns:31
+[ 2026-08-20 22:41:07,193 ] 33 root -INFO - required no of columns:2
+[ 2026-08-20 22:41:07,193 ] 34 root -INFO - Data frame columns:31
+[ 2026-08-20 22:41:07,721 ] 49 root -INFO - Data validation completed and DataValidationArtifact(validation_status=False, valid_train_file_path='Artifacts\\08_20_2026_22_39_35\\data_validation\\validated\\train.csv', valid_test_file_path='Artifacts\\08_20_2026_22_39_35\\data_validation\\validated\\test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts\\08_20_2026_22_39_35\\data_validation\\drift_report\\report.yaml')
+[ 2026-08-20 22:41:07,721 ] 58 root -INFO - start data transformation
+[ 2026-08-20 22:41:07,721 ] 58 root -INFO - entered initiate_data_transformation method of datatransformation class
+[ 2026-08-20 22:41:07,721 ] 60 root -INFO - start data transformation
+[ 2026-08-20 22:41:07,778 ] 40 root -INFO - entered get_data_transformer_object method of transformation
+[ 2026-08-20 22:41:07,779 ] 45 root -INFO - initialize KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2026-08-20 22:41:07,807 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-20 22:41:07,814 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-20 22:41:07,814 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-20 22:41:07,824 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-20 22:41:07,826 ] 61 root -INFO - Data transformation completed and DataTransformationArtifact(transformed_object_file_path='Artifacts\\08_20_2026_22_39_35\\data_transformation\\transformed_object\\preprocessing.pkl', transformed_train_file_path='Artifacts\\08_20_2026_22_39_35\\data_transformation\\transformed\\train.npy', transformed_test_file_path='Artifacts\\08_20_2026_22_39_35\\data_transformation\\transformed\\test.npy')
+[ 2026-08-20 22:41:07,827 ] 70 root -INFO - start model trainer
+[ 2026-08-20 22:45:30,467 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-20 22:45:30,531 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-20 22:45:30,531 ] 41 root -INFO - entered the save_object method of MainUtils class
+[ 2026-08-20 22:45:30,534 ] 45 root -INFO - excited the save_object method of mainUtils class
+[ 2026-08-20 22:45:30,535 ] 115 root -INFO - model trainer artifact:ModelTrainerArtifact(trained_model_file_path='Artifacts\\08_20_2026_22_39_35\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9913924050632912, precision_score=0.9941104792851341, recall_score=0.9941104792851341), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.97165991902834, precision_score=0.9732360097323601, recall_score=0.9732360097323601))
+[ 2026-08-20 22:45:30,541 ] 73 root -INFO - model trainer completed and ModelTrainerArtifact(trained_model_file_path='Artifacts\\08_20_2026_22_39_35\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9913924050632912, precision_score=0.9941104792851341, recall_score=0.9941104792851341), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.97165991902834, precision_score=0.9732360097323601, recall_score=0.9732360097323601))

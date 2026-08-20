@@ -1,0 +1,12 @@
+[ 2026-08-20 16:03:55,678 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 16:03:55,719 ] 107 dagshub -INFO - Accessing as NarmataGoel
+[ 2026-08-20 16:03:57,535 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/NarmataGoel/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2026-08-20 16:03:59,100 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 16:03:59,108 ] 107 dagshub -INFO - Initialized MLflow to track repo "NarmataGoel/NetworkSecurity"
+[ 2026-08-20 16:03:59,112 ] 107 dagshub -INFO - Repository NarmataGoel/NetworkSecurity initialized!
+[ 2026-08-20 16:04:52,445 ] 34 root -INFO - start data ingestion
+[ 2026-08-20 16:05:09,645 ] 57 root -INFO - performed train test split
+[ 2026-08-20 16:05:09,646 ] 60 root -INFO - exporting train and test file path
+[ 2026-08-20 16:05:09,863 ] 63 root -INFO - exporting train and test file path
+[ 2026-08-20 16:05:09,864 ] 37 root -INFO - Data Ingestion completed and DataIngestionArtifact(trained_file_path='Artifacts\\08_20_2026_16_03_17\\data_ingestion\\ingested\\train.csv', test_file_path='Artifacts\\08_20_2026_16_03_17\\data_ingestion\\ingested\\test.csv')
+[ 2026-08-20 16:05:09,866 ] 46 root -INFO - start data validation

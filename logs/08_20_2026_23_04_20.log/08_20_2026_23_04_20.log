@@ -1,0 +1,6 @@
+[ 2026-08-20 23:04:31,009 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 23:04:31,036 ] 107 dagshub -INFO - Accessing as NarmataGoel
+[ 2026-08-20 23:04:32,155 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/NarmataGoel/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2026-08-20 23:04:33,376 ] 1025 httpx -INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-08-20 23:04:33,380 ] 107 dagshub -INFO - Initialized MLflow to track repo "NarmataGoel/NetworkSecurity"
+[ 2026-08-20 23:04:33,382 ] 107 dagshub -INFO - Repository NarmataGoel/NetworkSecurity initialized!
